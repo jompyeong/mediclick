@@ -1,17 +1,22 @@
-<!doctype html>
-<html lang="ko" class="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>MediClick - 진료과 및 병원 추천 & 커뮤니티</title>
-    <!-- Google Fonts: Manrope for all typography as per Vitality Mint theme -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <!-- Material Symbols Outlined -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  </head>
-  <body class="bg-[#f8f9ff] text-[#0b1c30] font-sans antialiased selection:bg-[#2dd4bf]/20 overflow-x-hidden">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import {defineConfig} from 'vite';
 
+export default defineConfig(() => {
+  return {
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
+    server: {
+      // HMR is disabled in AI Studio via DISABLE_HMR env var.
+      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
+      hmr: process.env.DISABLE_HMR !== 'true',
+      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
+      watch: process.env.DISABLE_HMR === 'true' ? null : {},
+    },
+  };
+});

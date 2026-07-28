@@ -1,8 +1,6 @@
-node_modules/
-build/
-dist/
-coverage/
-.DS_Store
-*.log
-.env*
-!.env.example
+{
+  "name": "MediClick",
+  "description": "진료과 추천 및 증상 사전 등록 접수, 실시간 의료 정보 및 사용자 의견을 주고받는 커뮤니티 게시판 플랫폼",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

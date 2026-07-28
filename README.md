@@ -1,12 +1,20 @@
-{
-  "projectId": "laughing-trail-0mbw7",
-  "appId": "1:832063419166:web:9f1c802c7f4165cc114f0f",
-  "apiKey": "AIzaSyCk_iRahhgGM9tJ-TYMDTgWfjRRs1aSTP8",
-  "authDomain": "laughing-trail-0mbw7.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-516e7c56-78da-45c3-9fb7-d35b4e4c1a74",
-  "storageBucket": "laughing-trail-0mbw7.firebasestorage.app",
-  "messagingSenderId": "832063419166",
-  "measurementId": "",
-  "oAuthClientId": "832063419166-b246t341areu3dsd6batiqbdlk42hevs.apps.googleusercontent.com",
-  "recaptchaSiteKey": ""
-}
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/516e7c56-78da-45c3-9fb7-d35b4e4c1a74
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
